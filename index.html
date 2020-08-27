@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Cayman by jasonlong</title>
+    <title>Learn2Sing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -12,33 +12,45 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Cayman</h1>
-      <h2 class="project-tagline">A responsive theme for your project on GitHub Pages</h2>
-      <a href="https://github.com/jasonlong/cayman-theme" class="btn">View on GitHub</a>
+      <h1 class="project-name">Learn2Sing</h1>
+      <h2 class="project-tagline">A full singing voice synthesis system for a target speaker without his/her singing data</h2>
+      <!--<a href="https://github.com/jasonlong/cayman-theme" class="btn">View on GitHub</a> 
       <a href="https://github.com/jasonlong/cayman-theme/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/jasonlong/cayman-theme/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="https://github.com/jasonlong/cayman-theme/tarball/master" class="btn">Download .tar.gz</a> -->
     </section>
 
     <section class="main-content">
-      <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>. <a href="https://github.com">Links</a> should be blue with no underlines (unless hovered over).</p>
+      <h1 id="Learn2Sing"><center>LEARN2SING: TARGET SPEAKER SINGING VOICE SYNTHESIS BY LEARNING FROM A SINGING TEACHER</center></h1>
+     <center>Heyang Xue<sup>1</sup>, Shan Yang<sup>1</sup>, Yi Lei<sup>1</sup>, Lei Xie<sup>1</sup>, Xiulin Li<sup>2</sup></center>
+      <center><sub>1</sub>Audio, Speech and Language Processing Group (ASLP@NPU), School of Computer Science, Northwestern Polytechnical University, Xian, China</center>
+      <center><sub>2</sub>Databaker (Beijing) Technology Co., Ltd.</center>
+<h2 id="abstract">Abstract</h2>
 
-<p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.</p>
+<div style="text-align: justify">Singing voice synthesis has been paid rising attention with
+the rapid development of speech synthesis area. In general, a
+studio-level singing corpus is usually necessary to produce a
+natural singing voice from lyrics and music-related transcription. However, such a corpus is difficult to collect since it’s
+hard for many of us to sing like a professional singer. In this
+paper, we propose an approach – Learn2Sing that only needs a
+singing teacher to generate the target speakers’ singing voice
+without their singing voice data. In our approach, a teacher’s
+singing corpus and speech from multiple target speakers are
+trained in a frame-level auto-regressive acoustic model and
+share the common speaker embedding and style tag embedding. Meanwhile, since there is no music-related transcription for the target speaker, we utilize log-scale fundamental
+frequency (LF0) as an auxiliary feature to be the inputs of
+the acoustic model for building a unified input representation. In order to enable the target speaker to sing without
+singing reference audio in the inference stage, the duration
+model and LF0 prediction model are also trained. Particularly, we employ domain adversarial training (DAT) in the
+acoustic model, which aims to enhance the singing performance of target speakers by disentangling style from acoustic features of singing and speaking data. Our experiments
+indicate that the proposed approach is capable of synthesizing singing voice for target speaker given only their normal
+speech samples.</div>
+      
+<p><br /></p>
 
-<p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.</p>
+<p><img src="/images/acoustic-model.png" alt="arch" /></p>
 
-<blockquote>
-<p>There should be no margin above this first sentence.</p>
-
-<p>Blockquotes should be a lighter gray with a gray border along the left side.</p>
-
-<p>There should be no margin below this final sentence.</p>
-</blockquote>
-
-<h1>
-<a id="header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 1</h1>
-
-<p>This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.</p>
-
+<p><br /></p>
+      
 <h2>
 <a id="header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 2</h2>
 
@@ -298,13 +310,13 @@
 
 <pre><code>This is the final element on the page and there should be no margin below this.
 </code></pre>
-
+<!--
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-
+-->
     </section>
   </body>
 </html>
